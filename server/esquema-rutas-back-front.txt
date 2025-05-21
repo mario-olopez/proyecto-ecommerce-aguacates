@@ -1,0 +1,29 @@
+----- RUTAS EXPRESS -----
+
+POST --> /api/orders --> Crear un nuevo pedido
+
+GET --> api/orders/:id --> Obtener detalles de un pedido
+
+GET --> api/stock --> Obtener stock de aguacates
+
+Al hacer POST de un pedido se crea el pedido y se resta amount al stock_kg de aguacates
+
+(opcionales)
+
+POST --> api/users --> Registrar nuevo usuario
+
+GET --> api/users/:id --> Obtener info del usuario
+
+
+------ RUTAS REACT -----
+
+/ --> Home --> Landing y simulador (calculadora) de pedido
+
+/pedido --> OrderForm --> Formulario para realizar pedido
+        --> Payment --> Input para realizar Bizum
+
+/confirmacionpedido --> ConfirmOrder --> Mensaje de pedido realizado con éxito o no
+
+(opcional pero importante)
+
+/admin --> AdminOrders --> Página para que el admin vea los pedidos realizados
