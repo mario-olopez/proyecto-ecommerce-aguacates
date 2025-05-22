@@ -2,13 +2,13 @@
 
 POST --> /api/orders --> Crear un nuevo pedido
 
-GET --> api/orders/:id --> Obtener detalles de un pedido
+GET --> api/orders/email/:email --> Obtener detalles de un pedido por email
 
 GET --> api/stock --> Obtener stock de aguacates
 
 Al hacer POST de un pedido se crea el pedido y se resta amount al stock_kg de aguacates
 
-(opcionales)
+(secundario pero importante)
 
 POST --> api/users --> Registrar nuevo usuario
 
@@ -24,6 +24,6 @@ GET --> api/users/:id --> Obtener info del usuario
 
 /confirmacionpedido --> ConfirmOrder --> Mensaje de pedido realizado con éxito o no
 
-(opcional pero importante)
+(opcional)
 
 /admin --> AdminOrders --> Página para que el admin vea los pedidos realizados
