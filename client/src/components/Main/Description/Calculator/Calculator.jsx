@@ -29,7 +29,7 @@ const Calculator = () => {
         <button onClick={add}>+</button>
       </div>
 
-      <p><strong>Precio de tu pedido:</strong> <input value={totalPrice}></input>€</p>
+      <p><strong>Precio de tu pedido:</strong> <input value={totalPrice} readOnly></input>€</p>
       <a href="/nuevopedido">Haz click aquí si quieres realizar tu pedido</a>
 
   </div>;
