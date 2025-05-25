@@ -29,7 +29,15 @@ const queries = {
         RETURNING *;
     `,
     getStock: `
-    SELECT stock_kg FROM aguacates WHERE id = 1
+        SELECT stock_kg FROM aguacates WHERE id = 1
+    `,
+    getAllOrders: `
+        SELECT
+        o.id_order, o.amount, o.payment, o.date, o.state,
+        u.name, u.surname, u.email, u.address, u.phone
+        FROM orders o
+        JOIN users u ON o.id_user = u.id_user
+        ORDER BY o.date DESC;
     `
 }
 

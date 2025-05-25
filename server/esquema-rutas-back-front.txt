@@ -18,12 +18,6 @@ GET --> api/stock --> Obtener stock de aguacates http://localhost:3000/api/stock
 
 Al hacer POST de un pedido se crea el pedido y se resta amount al stock_kg de aguacates
 
-(secundario pero importante)
-
-POST --> api/users --> Registrar nuevo usuario
-
-GET --> api/users/:id --> Obtener info del usuario
-
 
 ------ RUTAS REACT -----
 
@@ -36,4 +30,4 @@ GET --> api/users/:id --> Obtener info del usuario
 
 (opcional)
 
-/admin --> AdminOrders --> Página para que el admin vea los pedidos realizados
+/admin --> AdminOrders --> Página para que el admin vea los pedidos realizados: http://localhost:3000/api/orders/ordersdashboard

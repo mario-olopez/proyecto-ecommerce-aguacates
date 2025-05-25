@@ -1,7 +1,7 @@
 const morgan = require('morgan');
 
 morgan.token('param', function (req, res, param) {
-  return req.params[param];
+  return req.params && req.params[param] ? req.params[param] : "-";
 });
 
 morgan.token('host', (req) => req.hostname);

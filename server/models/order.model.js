@@ -23,7 +23,13 @@ const getOrdersByEmail = async (email) => {
     return result.rows;
 }
 
+const getAllOrders = async () => {
+    const result = await pool.query(queries.getAllOrders);
+    return result.rows;
+}
+
 module.exports = {
     createOrder,
-    getOrdersByEmail
+    getOrdersByEmail,
+    getAllOrders
 }
