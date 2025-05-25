@@ -1,24 +1,78 @@
-.nav-bar{
+.nav-bar {
     display: flex;
-    list-style: none;
-    gap: 5rem;
     justify-content: center;
-    font-family: "Poetsen One", sans-serif;
-    margin-top: 2rem;
+    align-items: center;
+    background-color: #eaffdb;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 10;
 }
-
-.nav-bar li a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    font-weight: bold;
+  
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 20;
     border: 2px solid black;
     border-radius: 15px;
-    padding: 0.75rem;
-    background-color: rgb(102, 199, 118);
-    transition: background-color 0.3 ease;
 }
-
+  
+.menu-hamburcate {
+    width: 5rem;
+}
+  
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+}
+  
+.nav-links li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(102, 199, 118);
+    padding: 1rem;
+    border-radius: 15px;
+    border: 2px solid black;
+    transition: background-color 0.3s ease;
+}
+  
 .nav-bar li a:hover {
     background-color: rgb(144, 224, 158);
+}
+  
+@media (max-width: 768px) {
+    .nav-bar {
+      justify-content: flex-start;
+      position: relative;
+    }
+  
+    .hamburger {
+      display: block;
+      position: relative;
+      z-index: 10;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 50px;
+      left: 1rem;
+      width: max-content;
+      height: 150px;
+      background: #eaffdb;
+      border-radius: 15px;
+      display: none;
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 1rem;
+      z-index: 5;
+      align-items: flex-start;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
 }

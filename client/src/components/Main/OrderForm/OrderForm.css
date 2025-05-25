@@ -54,4 +54,14 @@
     background-color: rgb(30, 119, 46);
     color: white;
 }
+
+.bizum-payment{
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: rgb(102, 199, 118);
+    width: 100%;
+    box-sizing: border-box;
+}
   

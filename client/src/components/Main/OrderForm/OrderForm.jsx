@@ -15,8 +15,6 @@ const OrderForm = () => {
     payment: ""
   })
 
-  const [message, setMessage] = useState("")
-
   const handleChange = (e) => {
     const {name, value} = e.target;
 
@@ -42,10 +40,37 @@ const OrderForm = () => {
     try{
       const res = await axios.post("http://localhost:3000/api/orders", order);
       console.log(res.data)
-      setMessage("Pedido realizado con éxito")
+      
+      Swal.fire({
+        title: "¡Formulario enviado con éxito!",
+        text: "Recuerda realizar el pago por Bizum para confirmar el pedido",
+        imageUrl: "/aguacate-enviado.gif",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Aguacate feliz"
+      });
+
+      setOrder({
+        name: "",
+        surname: "",
+        email: "",
+        address: "",
+        phone: "",
+        amount: "",
+        payment: ""
+      })
+
     } catch(error){
       console.error(error);
-      setMessage("Error al realizar el pedido")
+      
+      Swal.fire({
+        title: "¡Ups! Se ha producido un error",
+        text: "Revisa que hayas completado el formulario correctamente",
+        imageUrl: "/aguacate-triste.gif",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Aguacate triste"
+      })
     }
   }
 
@@ -54,19 +79,19 @@ const OrderForm = () => {
 
     <form onSubmit={handleSubmit} className="order-form">
       <label>Nombre:</label>
-      <input type="text" name="name" value={order.name} onChange={handleChange} required></input><br />
+      <input type="text" name="name" value={order.name} onChange={handleChange} required pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,}$" title="Debe contener al menos dos letras"></input><br />
 
       <label>Apellidos:</label>
-      <input type="text" name="surname" value={order.surname} onChange={handleChange} required></input><br />
+      <input type="text" name="surname" value={order.surname} onChange={handleChange} required pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,}$" title="Debe contener al menos dos letras"></input><br />
 
       <label>Email:</label>
-      <input type="email" name="email" value={order.email} onChange={handleChange} required></input><br />
+      <input type="email" name="email" value={order.email} onChange={handleChange} required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="Escribe una dirección de correo válida"></input><br />
 
       <label>Dirección:</label>
-      <input type="text" name="address" value={order.address} onChange={handleChange} required></input><br />
+      <input type="text" name="address" value={order.address} onChange={handleChange} required pattern=".{5,}" title="Escribe una dirección existente"></input><br />
 
       <label>Número de móvil:</label>
-      <input type="tel" name="phone" value={order.phone} onChange={handleChange} required></input><br />
+      <input type="tel" name="phone" value={order.phone} onChange={handleChange} required pattern="^[6-7]{1}[0-9]{8}$" title="El móvil debe ser de España"></input><br />
 
       <label>¿Cuántos kilos quieres?</label>
       <input type="number" name="amount" value={order.amount} onChange={handleChange} min="6" required></input><br />
@@ -75,9 +100,13 @@ const OrderForm = () => {
       <input type="number" name="payment" value={order.payment} placeholder="€" readOnly></input><br />
 
       <button type="submit" disabled={!order.payment}>Realizar pedido</button>
-    </form>
 
-    {message && <p>{message}</p>}
+      <div className="bizum-payment">
+        <h3>Realiza el pago por Bizum al siguiente número: <b>606874244</b></h3>
+        <h3>En el asunto escribe: "Pedido aguacates" + "tu correo electrónico"</h3>
+      </div>
+
+    </form>
 
   </div>;
 };
