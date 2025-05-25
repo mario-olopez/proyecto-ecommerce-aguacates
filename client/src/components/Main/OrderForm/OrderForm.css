@@ -1,0 +1,57 @@
+.order-div{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 2.5rem auto;
+    background-color: rgb(193, 255, 127);
+    padding: 2rem;
+    max-width: 550px;
+    box-shadow: 10px 10px 5px black;
+}
+
+.order-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.order-form label {
+    text-align: left;
+}
+
+.order-form input {
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: 2px solid black;
+    font-size: 1.4rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Poetsen One", sans-serif;
+}
+
+.order-form button {
+    padding: 0.75rem 1rem;
+    background-color: rgb(37, 206, 66);
+    border: 2px solid black;
+    color: black;
+    font-size: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: "Poetsen One", sans-serif;
+}
+
+.order-form button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.order-form button:hover:enabled {
+    background-color: rgb(30, 119, 46);
+    color: white;
+}
+  

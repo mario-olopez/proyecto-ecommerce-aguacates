@@ -8,7 +8,7 @@ const findOrCreateUser = async ({ name, surname, email, address, phone }) => {
     return existing.rows[0];
   }
 
-  const insert = await pool.query(queries.INSERT_USER, [name, surname, email, address, phone]);
+  const insert = await pool.query(queries.insertUser, [name, surname, email, address, phone]);
   return insert.rows[0];
 };
 

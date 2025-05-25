@@ -34,6 +34,9 @@ const getOrdersByEmail = async (req, res) => {
         if(orders.length === 0){
             return res.status(400).json({ message: "No existen pedidos realizados con ese correo"})
         }
+
+        return res.status(200).json(orders);
+        
     } catch (error){
         console.error("Error al obtener el pedido: ", error);
         res.status(500).json({message: "Error en el servidor"})

@@ -14,7 +14,7 @@ const queries = {
     getOrderByEmail: `
         SELECT
             o.id_order, o.amount, o.payment, o.date, o.state,
-            u.name, u.surname, e.email, u.address, u.phone
+            u.name, u.surname, u.email, u.address, u.phone
         FROM orders o
             JOIN users u ON o.id_user = u.id_user
         WHERE u.email = $1;
