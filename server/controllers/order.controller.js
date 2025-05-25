@@ -1,5 +1,6 @@
 const order = require("../models/order.model")
 const user = require("../models/user.model")
+const aguacates = require("../models/aguacates.model")
 
 const createOrder = async (req, res) => {
     try {
@@ -43,7 +44,23 @@ const getOrdersByEmail = async (req, res) => {
     }
 }
 
+const getAllOrders = async (req, res) => {
+    try{
+        const orders = await order.getAllOrders();
+        const stock = await aguacates.getStock()
+
+        res.status(200).json({
+            stock_kg: stock.stock_kg,
+            pedidos: orders
+        })
+    } catch(error){
+        console.error("Error al obtener los pedidos y el stock: ", error);
+        res.status(500).json({message: "Error en el servidor"});
+    }
+}
+
 module.exports = {
     createOrder,
-    getOrdersByEmail
+    getOrdersByEmail,
+    getAllOrders
 }

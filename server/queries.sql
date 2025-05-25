@@ -44,3 +44,6 @@ SELECT
 FROM orders o
 JOIN users u ON o.id_user = u.id_user
 WHERE u.email = $1;
+
+-- Consulta para todo el dinero ganado
+SELECT SUM(payment) AS total_recaudado FROM orders;
