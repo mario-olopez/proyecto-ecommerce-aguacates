@@ -26,3 +26,21 @@ CREATE TABLE aguacates (
 );
 
 INSERT INTO aguacates (stock_kg) VALUES (1500);
+
+INSERT INTO users (name, surname, email, address, phone)
+VALUES 
+  ('Mario', 'López', 'mario@gmail.com', 'Avenida de mi casa, 38', '606120508'),
+  ('Jonás', 'Jiménez', 'jonasitoj@gmail.com', 'Calle de la gran casa, 33', '633185970');
+
+INSERT INTO users (name, surname, email, address, phone)
+VALUES
+  ('Jesús', 'Juliánez', 'jjulianes@gmail.com', 'Calle de Jesucristo, 666', '666366663');
+
+--Obtener datos de un pedido por email
+
+SELECT 
+  o.id_order, o.amount, o.payment, o.date, o.state,
+  u.name, u.surname, u.email, u.address, u.phone
+FROM orders o
+JOIN users u ON o.id_user = u.id_user
+WHERE u.email = $1;

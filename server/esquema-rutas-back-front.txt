@@ -1,14 +1,24 @@
 ----- RUTAS EXPRESS -----
 
-POST --> /api/orders --> Crear un nuevo pedido
+POST --> /api/orders --> Crear un nuevo pedido http://localhost:3000/api/orders
 
-GET --> api/orders/:id --> Obtener detalles de un pedido
+{
+  "name": "Alberto",
+  "surname": "Javier",
+  "email": "aljavier@gmail.com",
+  "address": "Avenida de su casa, 55",
+  "phone": "608989997",
+  "amount": 4,
+  "payment": 40.00
+}
 
-GET --> api/stock --> Obtener stock de aguacates
+GET --> api/orders/email/:email --> Obtener detalles de un pedido por email http://localhost:3000/api/orders/email/aljavier@gmail.com
+
+GET --> api/stock --> Obtener stock de aguacates http://localhost:3000/api/stock
 
 Al hacer POST de un pedido se crea el pedido y se resta amount al stock_kg de aguacates
 
-(opcionales)
+(secundario pero importante)
 
 POST --> api/users --> Registrar nuevo usuario
 
@@ -24,6 +34,6 @@ GET --> api/users/:id --> Obtener info del usuario
 
 /confirmacionpedido --> ConfirmOrder --> Mensaje de pedido realizado con éxito o no
 
-(opcional pero importante)
+(opcional)
 
 /admin --> AdminOrders --> Página para que el admin vea los pedidos realizados

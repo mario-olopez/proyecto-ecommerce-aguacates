@@ -1,0 +1,14 @@
+.text-description{
+    font-family: "Poetsen One", sans-serif;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid black;
+    font-size: 1.1rem;
+}
+
+.text-description h1 {
+    color: rgb(102, 199, 118);
+    text-shadow: 1px 1px 2px black;
+}
