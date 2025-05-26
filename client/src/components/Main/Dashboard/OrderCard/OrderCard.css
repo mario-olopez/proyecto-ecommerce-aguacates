@@ -1,0 +1,38 @@
+.order-card{
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: rgb(193, 255, 127);
+    box-shadow: 10px 10px 5px black;
+    text-align:left;
+}
+
+.title-card{
+    background-color: white;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.data-card{
+    background-color: rgb(193, 255, 127);
+    padding: 1rem;
+}
+
+.data-card button{
+    font-weight: bold;
+    color: black;
+    background-color: rgb(102, 199, 118);
+    border-radius: 15px;
+    border: 2px solid black;
+    transition: background-color 0.3s ease;
+    padding: 1rem;
+    cursor: pointer;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: rgb(144, 224, 158);
+}
