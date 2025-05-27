@@ -12,7 +12,7 @@ router.post("/", orderController.createOrder)
 router.get("/email/:email", orderController.getOrdersByEmail)
 
 //Ruta para obtener todos los pedidos
-//http://localhost:3000/api/ordersdashboard
+//http://localhost:3001/api/ordersdashboard
 router.get("/ordersdashboard", orderController.getAllOrders)
 
 //Ruta para actualizar estado del pedido por id

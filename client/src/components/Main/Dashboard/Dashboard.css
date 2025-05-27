@@ -50,3 +50,9 @@
     transition: background-color 0.3s ease;
     font-family: "Poetsen One", sans-serif;
 }
+
+@media (max-width: 829px){
+    .user-search input{
+        font-size: 0.65rem;
+    }
+}

@@ -27,8 +27,20 @@ const About = () => {
       <div className="amount">
         <h3>Actualmente disponemos de un stock de: {amount}kg</h3>
       </div>
+      <motion.div 
+        className="about-text"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 5 }}
+        >
+          <h2>Desde 2013, cultivando calidad</h2>
+          <p>Nos dedicamos con pasión a ofrecer aguacates de la mejor calidad, directamente desde nuestro huerto en Bédar, Almería. 
+            A lo largo de los años, hemos mantenido un firme compromiso con la frescura, el sabor auténtico y el respeto por la tierra.
+          </p>
+      </motion.div>
       <div className="about-carousel">
         <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
+
           <div>
             <img src="/fotos-huerto/DSC_0079_1.JPG" alt="Imagen 1" />
           </div>
@@ -49,17 +61,6 @@ const About = () => {
           </div>
         </Carousel>
       </div>
-      <motion.div 
-        className="about-text"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 5 }}
-        >
-          <h2>Desde 2013, cultivando calidad</h2>
-          <p>Nos dedicamos con pasión a ofrecer aguacates de la mejor calidad, directamente desde nuestro huerto en Bédar, Almería. 
-            A lo largo de los años, hemos mantenido un firme compromiso con la frescura, el sabor auténtico y el respeto por la tierra.
-          </p>
-      </motion.div>
     </>
   )
 };

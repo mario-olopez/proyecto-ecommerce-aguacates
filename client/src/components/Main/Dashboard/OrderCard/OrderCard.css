@@ -36,3 +36,27 @@
 button:hover{
     background-color: rgb(144, 224, 158);
 }
+
+@media (max-width: 768px) {
+    .order-card {
+      margin: 1rem auto;
+      width: 90%;
+      padding: 0.75rem;
+      font-size: 0.95rem;
+    }
+  
+    .title-card {
+      padding: 0.75rem;
+      font-size: 0.75rem;
+    }
+  
+    .data-card {
+      padding: 0.75rem;
+    }
+  
+    .data-card button {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.75rem;
+    }
+}

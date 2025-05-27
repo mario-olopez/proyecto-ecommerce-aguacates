@@ -1,10 +1,11 @@
 .amount{
     border: 2px solid black;
     border-radius: 15px;
-    width: 50%;
     margin-top: 2rem;
+    margin-bottom: 1rem;
     padding: 1rem;
     background-color:rgb(193, 255, 127);
+    max-width: fit-content;
 }
 
 .carousel .slide img {

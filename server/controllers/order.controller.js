@@ -10,12 +10,13 @@ const createOrder = async (req, res) => {
             return res.status(400).json({ message: "Rellena todos los datos del pedido"})
         }
 
+        const calculationLogic = amount * 4 + 16;
         const existUser = await user.findOrCreateUser({name, surname, email, address, phone})
 
         const newOrder = await order.createOrder({
             id_user: existUser.id_user, 
             amount, 
-            payment})
+            payment: calculationLogic})
 
         res.status(201).json({
             message: "Pedido creado con éxito",

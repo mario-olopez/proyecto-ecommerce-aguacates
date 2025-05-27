@@ -16,6 +16,12 @@
     z-index: 20;
     border: 2px solid black;
     border-radius: 15px;
+    background-color: rgb(102, 199, 118);
+    transition: background-color 0.3s ease;
+}
+
+.hamburger:hover {
+  background-color: rgb(144, 224, 158);
 }
   
 .menu-hamburcate {
@@ -54,6 +60,7 @@
       display: block;
       position: relative;
       z-index: 10;
+      margin-top: 0.5rem;
     }
   
     .nav-links {
@@ -62,11 +69,10 @@
       left: 1rem;
       width: max-content;
       height: 150px;
-      background: #eaffdb;
       border-radius: 15px;
       display: none;
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 2rem;
       padding: 1rem;
       z-index: 5;
       align-items: flex-start;
