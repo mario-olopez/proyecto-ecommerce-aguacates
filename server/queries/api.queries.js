@@ -38,6 +38,9 @@ const queries = {
         FROM orders o
         JOIN users u ON o.id_user = u.id_user
         ORDER BY o.date DESC;
+    `,
+    updateOrderState: `
+    UPDATE orders SET state = 'pagado' WHERE id_order = $1;
     `
 }
 
