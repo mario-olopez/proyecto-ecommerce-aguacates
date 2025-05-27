@@ -9,10 +9,6 @@
     background-color: rgb(102, 199, 118);
 }
 
-.footer span {
-
-}
-
 .footer h3 {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
@@ -28,4 +24,17 @@
     margin-top: 1rem;
     padding-top: 0.5rem;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer span {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
 }

@@ -5,11 +5,11 @@ POST --> /api/orders --> Crear un nuevo pedido http://localhost:3000/api/orders
 Al hacer POST de un pedido se crea el pedido y se resta amount al stock_kg de aguacates
 
 {
-  "name": "Alberto",
-  "surname": "Javier",
-  "email": "aljavier@gmail.com",
+  "name": "",
+  "surname": "",
+  "email": "@gmail.com",
   "address": "Avenida de su casa, 55",
-  "phone": "608989997",
+  "phone": "",
   "amount": 4,
   "payment": 40.00
 }
@@ -18,7 +18,7 @@ GET --> api/orders/email/:email --> Obtener detalles de un pedido por email http
 
 GET --> api/stock --> Obtener stock de aguacates http://localhost:3000/api/stock
 
-GET --> api/orders --> Obtener stock y todos los pedidos guardados en BBDD http://localhost:3001/api/orders/ordersdashboard
+GET --> api/orders --> Obtener stock y todos los pedidos guardados en BBDD http://localhost:3000/api/orders/ordersdashboard
 
 PUT --> Cambiar el estado de un pedido de pendiente a pagado --> http://localhost:3000/api/orders/:id/state
 

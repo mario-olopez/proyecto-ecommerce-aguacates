@@ -64,4 +64,9 @@
     width: 100%;
     box-sizing: border-box;
 }
+
+.bizum-payment img{
+    border: 2px solid black;
+    width: 100px;
+}
   

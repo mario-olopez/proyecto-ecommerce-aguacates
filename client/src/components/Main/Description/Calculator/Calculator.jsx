@@ -24,10 +24,10 @@ const Calculator = () => {
     </p>
 
     <div className="counter">
-        <button onClick={subtract}>−</button>
-        <span>{kilos} kg</span>
-        <button onClick={add}>+</button>
-      </div>
+      <button onClick={subtract}>−</button>
+      <span>{kilos} kg</span>
+      <button onClick={add}>+</button>
+    </div>
 
       <p><strong>Precio de tu pedido:</strong> <input value={totalPrice} readOnly></input>€</p>
       <a href="/nuevopedido">Haz click aquí si quieres realizar tu pedido</a>
