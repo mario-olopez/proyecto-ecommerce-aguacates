@@ -28,8 +28,14 @@ const getAllOrders = async () => {
     return result.rows;
 }
 
+const updateOrderState = async (id_order) => {
+    const result = await pool.query(queries.updateOrderState, [id_order]);
+    return result;
+}
+
 module.exports = {
     createOrder,
     getOrdersByEmail,
-    getAllOrders
+    getAllOrders,
+    updateOrderState
 }

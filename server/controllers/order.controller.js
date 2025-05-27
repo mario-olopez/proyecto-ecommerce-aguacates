@@ -59,8 +59,22 @@ const getAllOrders = async (req, res) => {
     }
 }
 
+const updateOrderState = async (req, res) => {
+    try{
+        const {id} = req.params;
+        await order.updateOrderState(id);
+
+        res.status(200).json({ message: "Estado del pedido cambiado con éxito"})
+    }
+    catch(error){
+        console.error("Error al cambiar el estado del pedido", error);
+        res.status(500).json({ message: "Error en el servidor"})
+    }
+}
+
 module.exports = {
     createOrder,
     getOrdersByEmail,
-    getAllOrders
+    getAllOrders,
+    updateOrderState
 }
