@@ -1,6 +1,7 @@
 const order = require("../models/order.model")
 const user = require("../models/user.model")
-const aguacates = require("../models/aguacates.model")
+const aguacates = require("../models/aguacates.model");
+const queries = require("../queries/api.queries");
 
 const createOrder = async (req, res) => {
     try {
@@ -8,6 +9,15 @@ const createOrder = async (req, res) => {
 
         if(!name || !surname || !email || !address || !phone || !amount || !payment) {
             return res.status(400).json({ message: "Rellena todos los datos del pedido"})
+        }
+
+        const stockResult = await pool.query(queries.getStock);
+        const currentStock = stockResult.rows[0].stock_kg;
+
+        if (amount > currentStock){
+            return res.status(400).json({
+                message: "Stock de aguacates insuficiente para tu pedido"
+            })
         }
 
         const calculationLogic = amount * 4 + 16;
