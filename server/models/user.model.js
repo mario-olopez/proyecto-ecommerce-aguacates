@@ -6,10 +6,10 @@ const findOrCreateUser = async ({ name, surname, email, address, phone }) => {
 
   if (existing.rows.length > 0) {
     return existing.rows[0];
+  } else {
+    const insert = await pool.query(queries.insertUser, [name, surname, email, address, phone]);
+    return insert.rows[0];
   }
-
-  const insert = await pool.query(queries.insertUser, [name, surname, email, address, phone]);
-  return insert.rows[0];
 };
 
 module.exports = {

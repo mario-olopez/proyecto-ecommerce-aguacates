@@ -8,11 +8,11 @@ const orderController = require("../controllers/order.controller")
 router.post("/", orderController.createOrder)
 
 //Ruta para obtener pedido por email
-//http://localhost:3000/api/email/
+//http://localhost:3000/api/email/:email
 router.get("/email/:email", orderController.getOrdersByEmail)
 
 //Ruta para obtener todos los pedidos
-//http://localhost:3001/api/ordersdashboard
+//http://localhost:3000/api/ordersdashboard
 router.get("/ordersdashboard", orderController.getAllOrders)
 
 //Ruta para actualizar estado del pedido por id

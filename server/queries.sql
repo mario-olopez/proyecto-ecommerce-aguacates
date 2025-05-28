@@ -26,6 +26,10 @@ CREATE TABLE aguacates (
 );
 
 INSERT INTO aguacates (stock_kg) VALUES (1500);
+UPDATE aguacates
+SET stock_kg = 1500
+WHERE id = 1;
+
 
 INSERT INTO users (name, surname, email, address, phone)
 VALUES 
