@@ -104,7 +104,7 @@ const OrderForm = () => {
       <div className="bizum-payment">
         <h3>Realiza el pago por Bizum a través de este QR</h3>
         <h3>En el asunto escribe: "Pedido aguacates" + "tu correo electrónico"</h3>
-        <img src="/qr-bizum.png" />
+        <img src="/qr-bizum.png" alt="QR para realizar Bizum"/>
       </div>
 
     </form>
