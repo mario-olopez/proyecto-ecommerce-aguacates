@@ -31,7 +31,7 @@ Este backend ha sido desarrollado para gestionar los pedidos de aguacates del **
 ├── {} package-lock.json                         
 ├── {} package.json  
 ├── 🐘 queries                  
-├── 🗄️server.js
+└── 🗄️server.js
 ````
 
 ## Instalación

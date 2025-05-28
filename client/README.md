@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Frontend de e-commerce aguacates
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este frontend ha sido desarrollado con **React** utilizando `Create React App`.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Arrancar el proyecto
 
-### `npm start`
+1. Instalar dependencias:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Inicia la aplicación con el siguiente comando
+```
+npm start
+````
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Estructura del proyecto
 
-### `npm run build`
+```
+📁 client/
+├── 📁 node_modules/             
+│
+├── 📁 public/
+│
+├── 📁 src/
+│   ├── assets
+│   └── components
+│        ├── Header
+│        │   └── Nav
+│        │ 
+│        ├── Main
+│        │    ├── About
+│        │    │ 
+│        │    ├── Dashboard
+│        │    │      └── OrderCard
+│        │    │   
+│        │    ├── Description
+│        │    │      ├── Calculator
+│        │    │      └── Text
+│        │    │
+│        │    └── OrderForm
+│        │ 
+│        └── Footer
+│           
+├── .gitignore                 
+├── {} package-lock.json     
+└── {} package.json                        
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Componentes principales
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```Nav.jsx```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Menú superior con links.
 
-### `npm run eject`
+- Uso de menú hamburguesa.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```Description```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Calculadora que simula el precio de un pedido en función de los kilos seleccionados.
+- Texto descriptivo del producto.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Calculadora pedido](public/gif-calculadora-pedido.gif)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```OrderForm```
+- Formulario controlado con useState.
+- Validaciones en los inputs con expresiones regulares.
+-  Al enviar el formulario, hace una petición POST al backend.
 
-## Learn More
+```About```
+- Vista dedicada a la implementación de librerías para mejorar la experiencia de usuario
+- Petición GET para consultar el stock de aguacates
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```Dashboard```
+- Panel de control para el administrador donde se cargan por defecto todos los pedidos realizados
+- Permite buscar por email de usuario los detalles de sus pedidos
+- Uso de los hooks useState y useEffect
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```OrderCard```
+- Muestra la información detallada de un pedido.
+- Funcionalidad para actualizar el pedido de "pendiente" a "pagado" a través de un botón.
+- Comunicación por props con Dashboard
 
-### Code Splitting
+![Gif cambio estado](public/gif-cambio-state.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Interfaz de usuario
 
-### Analyzing the Bundle Size
+- Diseño adaptado a móviles
+- Tipografía personalizada y paleta de colores que emula el entorno rural
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Librerías utilizadas:
+- [React sweetalert2](https://www.npmjs.com/package/react-sweetalert2)
+- [Framer motion](https://www.npmjs.com/packageframer-motion)
+- [React Responsive Carousel](https://www.npmjs.com/package/react-responsive-carousel)
+- [Spinners React](https://www.npmjs.com/package/spinners-react)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
