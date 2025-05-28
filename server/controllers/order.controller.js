@@ -1,3 +1,4 @@
+const pool = require("../config/db_pgsql");
 const order = require("../models/order.model")
 const user = require("../models/user.model")
 const aguacates = require("../models/aguacates.model");
