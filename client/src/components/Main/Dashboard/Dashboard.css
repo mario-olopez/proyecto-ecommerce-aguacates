@@ -1,0 +1,58 @@
+.dashboard{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-search{
+    text-align: center;
+}
+
+.user-search input{
+    text-align: left;
+    border-radius: 15px;
+    font-family: "Poetsen One", sans-serif;
+    font-size:x-large;
+    height: 40px;
+    margin-top: 1rem;
+    padding: 1rem;
+    margin-right: 0.25rem;
+    width: 60%;
+}
+
+.user-search button{
+    padding: 0.75rem 1rem;
+    background-color: rgb(102, 199, 118);
+    border: 2px solid black;
+    color: black;
+    font-size: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: "Poetsen One", sans-serif;
+}
+
+.user-search button:hover{
+    background-color: rgb(144, 224, 158);
+}
+
+.clean-btn{
+    padding: 0.75rem 1rem;
+    background-color: rgb(102, 199, 118);
+    border: 2px solid black;
+    color: black;
+    font-size: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: 37%;
+    transition: background-color 0.3s ease;
+    font-family: "Poetsen One", sans-serif;
+}
+
+@media (max-width: 829px){
+    .user-search input{
+        font-size: 0.65rem;
+    }
+}

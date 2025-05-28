@@ -1,0 +1,32 @@
+.text-description{
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid black;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.text-description h1 {
+    color: rgb(102, 199, 118);
+    text-shadow: 1px 1px 2px black;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .text-description {
+      width: 30%;
+      margin-left: auto;
+      margin-right: 0.5rem;
+      font-size: 1.1rem;
+    }
+  
+    .text-description h1 {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+}

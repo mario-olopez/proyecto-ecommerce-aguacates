@@ -1,0 +1,30 @@
+.amount{
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color:rgb(193, 255, 127);
+    max-width: fit-content;
+}
+
+.carousel .slide img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+
+.about-carousel {
+    margin: 2rem auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.about-text{
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 1rem;
+    background-color: rgb(193, 255, 127);
+}

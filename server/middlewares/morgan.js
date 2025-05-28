@@ -1,13 +1,11 @@
-const morgan = require('morgan')
+const morgan = require('morgan');
 
-morgan.token('host', function (req, res) {
-    return req.hostname;
-});
-morgan.token('body', function (req, res) {
-    return JSON.stringify(req.body)
-})
 morgan.token('param', function (req, res, param) {
-    return req.params[param];
- });
+  return req.params && req.params[param] ? req.params[param] : "-";
+});
 
- module.exports = morgan
+morgan.token('host', (req) => req.hostname);
+morgan.token('body', (req) => JSON.stringify(req.body));
+
+
+module.exports = morgan('[:method] :url - param[id]=:param[id] - body=:body');
