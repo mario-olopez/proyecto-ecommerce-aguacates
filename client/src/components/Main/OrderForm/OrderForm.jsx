@@ -94,7 +94,7 @@ const OrderForm = () => {
       <input type="tel" name="phone" value={order.phone} onChange={handleChange} required pattern="^[6-7]{1}[0-9]{8}$" title="El móvil debe ser de España"></input><br />
 
       <label>¿Cuántos kilos quieres?</label>
-      <input type="number" name="amount" value={order.amount} onChange={handleChange} min="6" required></input><br />
+      <input type="number" name="amount" value={order.amount} onChange={handleChange} min="6" max="40" required></input><br />
 
       <label>El precio (€) de tu pedido es:</label>
       <input type="number" name="payment" value={order.payment} placeholder="€" readOnly></input><br />
