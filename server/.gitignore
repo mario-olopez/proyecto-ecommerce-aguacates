@@ -1,3 +1,4 @@
 /node_modules
 .env
 esquema-rutas-back-front.txt
+.DS_Store
