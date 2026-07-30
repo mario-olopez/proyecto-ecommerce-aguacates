@@ -38,7 +38,7 @@ const OrderForm = () => {
     e.preventDefault()
 
     try{
-      const res = await axios.post("http://localhost:3000/api/orders", order);
+      const res = await axios.post("http://localhost:3001/api/orders", order);
       console.log(res.data)
       
       Swal.fire({

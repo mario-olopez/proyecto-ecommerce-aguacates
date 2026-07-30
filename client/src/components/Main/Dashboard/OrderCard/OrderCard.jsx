@@ -10,7 +10,7 @@ const OrderCard = ({data: { name, surname, email, address, phone, payment, state
 
   const handleChangeState = async () => {
     try {
-      const res = await axios.put(`http://localhost:3000/api/orders/${id_order}/state`);
+      const res = await axios.put(`http://localhost:3001/api/orders/${id_order}/state`);
       if (res.status === 200){
         setPaymentState("pagado")
       }
